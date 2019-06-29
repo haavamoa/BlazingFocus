@@ -1,5 +1,5 @@
 # BlazingFocus
-A simple Javascript Interop library to set focus on a element with a id
+A Blazor Library to set focus on a HTML element based on a `id`.
 
 # Installing
 `PM> Install-Package BlazingFocus`
