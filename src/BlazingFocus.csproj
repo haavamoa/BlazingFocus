@@ -12,6 +12,7 @@
     <Description>A Blazor library to set focus on a HTML element based on a id.</Description>
     <PackageProjectUrl></PackageProjectUrl>
     <RepositoryUrl>https://github.com/haavamoa/BlazingFocus</RepositoryUrl>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
   </PropertyGroup>
 
   <ItemGroup>
