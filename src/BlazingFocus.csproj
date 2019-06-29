@@ -6,10 +6,12 @@
     <LangVersion>7.3</LangVersion>
     <RazorLangVersion>3.0</RazorLangVersion>
     <AddRazorSupportForMvc>true</AddRazorSupportForMvc>
-    <Version>0.0.1-beta</Version>
+    <Version>1.0.0</Version>
     <Authors>Håvard Moås</Authors>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Description>A simple JavaScriptInterop to set focus on a element with a id.</Description>
+    <Description>A Blazor library to set focus on a HTML element based on a id.</Description>
+    <PackageProjectUrl></PackageProjectUrl>
+    <RepositoryUrl>https://github.com/haavamoa/BlazingFocus</RepositoryUrl>
   </PropertyGroup>
 
   <ItemGroup>
