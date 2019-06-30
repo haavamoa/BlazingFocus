@@ -1,0 +1,44 @@
+﻿@page "/"
+@inject IJSRuntime JsRunTime;
+@using Microsoft.AspNetCore.Components
+
+<h1>Hello, world!</h1>
+
+Welcome to your new app.
+<input type="button" onclick="@FocusEntry" value="Click me to focus" />
+<input type="button" onclick="@UnFocusEntry" value="Click me to un-focus" />
+<input type="text" @ref="MyEntry" />
+
+@if (MyEntryHasFocus)
+{
+    <div>Entry has focus</div>
+}
+
+@code
+{
+    private ElementRef MyEntry { get; set; }
+
+    private async Task FocusEntry()
+    {
+        MyEntryHasFocus = await MyEntry.TryFocus(JsRunTime);
+
+    }
+
+    private async Task UnFocusEntry()
+    {
+        await MyEntry.TryUnFocus(JsRunTime);
+        MyEntryHasFocus = await MyEntry.HasFocus(JsRunTime);
+    }
+
+    public bool MyEntryHasFocus
+    {
+        get => m_myEntryHasFocus;
+        set
+        {
+            m_myEntryHasFocus = value;
+            StateHasChanged();
+        } 
+    }
+
+    private bool m_myEntryHasFocus;
+}
