@@ -14,6 +14,16 @@ By using NuGet:
 > In this scenario we want to set focus to a text input entry when the web app is started. This API can be used in whatever scenario (on a button click, when navigating etc.).
 > For a example with buttons, please see [here](src/BlazingFocus.TestClients/Client-Side/BlazingFocus.TestClient.Client/Pages/Index.razor)
 
+- Include JavaScript in HTML
+  - In Blazor Client side: `wwwroot/index.html`
+
+  - In Blazor Server Side: `Pages/_Host.cshtml`
+  
+```html
+<script src="_content/BlazingFocus/blazingFocus.js"></script>
+```
+> 
+
 - Add using to `BlazingFocus` and inject `IJSRuntime` in the top of the `.razor` page that you want to set focus:
   
 ```html
@@ -65,11 +75,9 @@ Welcome to my page
 
 
 # Remarks
-## Extra 
+
+## Extra
+
 The API also has `UnFocus` and `HasFocus`, theese can be used to un-focus a HTML element and to check if a HTML element has focus.
 For a example, please see [here](src/BlazingFocus.TestClients/Client-Side/BlazingFocus.TestClient.Client/Pages/Index.razor)
-
-## Issue with server-side Blazor (`blazorserverside`)
-I have only been able to make this work on a `client-side` Blazor project (`dotnet new blazor` and `dotnet new blazorhosted`).
-In a Blazor `server-side` project (`dotnet new blazorserverside`) the `content` folder will not be injected to `wwwroot`. This means that the javascript interopt will not find my javascript when trying to set focus.
 

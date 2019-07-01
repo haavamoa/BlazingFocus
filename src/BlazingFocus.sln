@@ -22,6 +22,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		..\README.md = ..\README.md
 	EndProjectSection
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Blazing.TestClient.ServerClient", "BlazingFocus.TestClients\Server-Side\Blazing.TestClient.ServerClient\Blazing.TestClient.ServerClient.csproj", "{5D3A4F82-291E-4F2A-8EF8-335DF27E9B7E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -44,6 +46,10 @@ Global
 		{4A3968B8-4FB7-475B-BD22-29375AD3D4ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4A3968B8-4FB7-475B-BD22-29375AD3D4ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4A3968B8-4FB7-475B-BD22-29375AD3D4ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5D3A4F82-291E-4F2A-8EF8-335DF27E9B7E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D3A4F82-291E-4F2A-8EF8-335DF27E9B7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D3A4F82-291E-4F2A-8EF8-335DF27E9B7E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D3A4F82-291E-4F2A-8EF8-335DF27E9B7E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -54,6 +60,7 @@ Global
 		{A7DDCBF8-4A3C-462A-838C-B7449C5A1817} = {C5972A52-E457-4EFB-92EE-C1ACC2AE4A39}
 		{8AA13635-303C-4AC5-A4D6-39F661BF9618} = {C5972A52-E457-4EFB-92EE-C1ACC2AE4A39}
 		{4A3968B8-4FB7-475B-BD22-29375AD3D4ED} = {C5972A52-E457-4EFB-92EE-C1ACC2AE4A39}
+		{5D3A4F82-291E-4F2A-8EF8-335DF27E9B7E} = {517E7CDF-890D-4D6C-87CC-5E15E8EB3CB1}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {642CE5E5-181A-4A5D-87CA-88E53FA7BC39}
