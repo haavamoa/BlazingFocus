@@ -3,32 +3,42 @@
 # Add steps that publish symbols, save build artifacts, deploy, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/apps/aspnet/build-aspnet-4
 
-trigger:
-- master
+#trigger:
+ # tags:
+  #  include:
+   # - v*
 
 pool:
   vmImage: 'windows-latest'
 
 variables:
-  solution: '**/*.sln'
+  solution: 'src/*.sln'
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
 
 steps:
-- task: NuGetToolInstaller@0
 
-- task: NuGetCommand@2
+- task: UseDotNet@2
+  displayName: "Use DotNet Core 3.0 Preview 6 SDK"
   inputs:
-    restoreSolution: '$(solution)'
+    packageType: 'sdk'
+    version: '3.0.100-preview6-012264'
 
-- task: VSBuild@1
+- task: DotNetCoreCLI@2
+  displayName: "DotNet Restore"
   inputs:
-    solution: '$(solution)'
-    msbuildArgs: '/p:DeployOnBuild=true /p:WebPublishMethod=Package /p:PackageAsSingleFile=true /p:SkipInvalidConfigurations=true /p:PackageLocation="$(build.artifactStagingDirectory)"'
-    platform: '$(buildPlatform)'
-    configuration: '$(buildConfiguration)'
+    command: 'restore'
+    projects: 'src/**/*.csproj'
+    feedsToUse: 'select'
 
-- task: VSTest@2
+- task: DotNetCoreCLI@2
+  displayName: "DotNet Build"
   inputs:
-    platform: '$(buildPlatform)'
-    configuration: '$(buildConfiguration)'
+    command: 'build'
+    projects: 'src/**/*.csproj'
+
+- task: DotNetCoreCLI@2
+  displayName: "DotNet Test"
+  inputs:
+    command: 'test'
+    projects: 'src/**/*.csproj'
