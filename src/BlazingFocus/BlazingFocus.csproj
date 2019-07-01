@@ -6,7 +6,7 @@
     <LangVersion>7.3</LangVersion>
     <RazorLangVersion>3.0</RazorLangVersion>
     <AddRazorSupportForMvc>true</AddRazorSupportForMvc>
-    <Version>2.1.0</Version>
+    <Version>1.0.0-pre001</Version>
     <Authors>Håvard Moås</Authors>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Description>A Blazor library to set focus on a HTML element based on a ref.</Description>

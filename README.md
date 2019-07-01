@@ -1,13 +1,18 @@
 [![NuGet](https://img.shields.io/nuget/v/BlazingFocus.svg?maxAge=2592000)](https://www.nuget.org/packages/BlazingFocus)
 
 # BlazingFocus
+
 A Blazor library to set focus on a HTML element based on a `ref`.
 
 # Installing
 
 By using NuGet:
 
-`PM> Install-Package BlazingFocus`
+`dotnet add package BlazingFocus`
+
+or
+
+`Install-Package BlazingFocus`
 
 # Usage
 
@@ -22,10 +27,9 @@ By using NuGet:
 ```html
 <script src="_content/BlazingFocus/blazingFocus.js"></script>
 ```
-> 
 
 - Add using to `BlazingFocus` and inject `IJSRuntime` in the top of the `.razor` page that you want to set focus:
-  
+
 ```html
 @page "/"
 @using BlazingFocus
@@ -81,3 +85,6 @@ Welcome to my page
 The API also has `UnFocus` and `HasFocus`, theese can be used to un-focus a HTML element and to check if a HTML element has focus.
 For a example, please see [here](src/BlazingFocus.TestClients/Client-Side/BlazingFocus.TestClient.Client/Pages/Index.razor)
 
+## Prerelease
+
+Hence that this is a library to use in Blazor, which is still in preview. This means that my project is also in a preview state and bugs may occure.
