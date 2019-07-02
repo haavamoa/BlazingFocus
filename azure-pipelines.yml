@@ -42,3 +42,12 @@ steps:
   inputs:
     command: 'test'
     projects: 'src/**/*.csproj'
+
+    - task: NuGetCommand@2
+      inputs:
+        command: 'pack'
+        packagesToPack: 'src/BlazingFocus/*.csproj'
+        versioningScheme: 'off'
+
+
+        
