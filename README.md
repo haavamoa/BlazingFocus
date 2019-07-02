@@ -1,4 +1,5 @@
 [![Build Status](https://dev.azure.com/havardmoas/HaavamoaProjects/_apis/build/status/haavamoa.BlazingFocus?branchName=master)](https://dev.azure.com/havardmoas/HaavamoaProjects/_build/latest?definitionId=7&branchName=master)
+
 [![NuGet](https://img.shields.io/nuget/v/BlazingFocus.svg?maxAge=2592000)](https://www.nuget.org/packages/BlazingFocus)
 
 # BlazingFocus
